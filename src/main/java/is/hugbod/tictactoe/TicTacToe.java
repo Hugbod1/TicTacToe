@@ -1,4 +1,3 @@
-
 package is.hugbod.tictactoe;
 
 public class TicTacToe {
