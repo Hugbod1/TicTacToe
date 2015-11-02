@@ -1,16 +1,23 @@
 package is.hugbod.tictactoe;
 
-
+import javax.swing.*;
 
 public class Board{
-	char[][] theBoard;
+	jButton[][] theBoard;
 	char player = 'x'; 
-	public void board(){
-		theBoard  = new char[3][3];
+	public void Board(){
+		theBoard  = new jButton[3][3];
+		int counter = 1;
+		for(int i = 0; i > 3; i++){
+			for(int j = 0; j > 3; j++){
+				theBoard[j][i].setText(counter.toString());
+				counter++;
+			}
+		}
 	}
 
 	public void FillSquare(){
-		
+
 	}
 
 	public boolean CheckForWin(){
@@ -37,6 +44,6 @@ public class Board{
 	}
 
 	public void Reset(){
-		
+
 	}
 }
