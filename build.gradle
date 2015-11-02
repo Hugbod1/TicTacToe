@@ -25,7 +25,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-//task stage{
-//	dependsON installDist
-//}
+task stage{
+	dependsON build
+}
 
