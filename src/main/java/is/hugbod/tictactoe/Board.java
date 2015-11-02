@@ -1,4 +1,4 @@
-package is.hugbod.tictactoe;
+/*package is.hugbod.tictactoe;
 
 import javax.swing.*;
 
@@ -47,3 +47,4 @@ public class Board{
 
 	}
 }
+*/
