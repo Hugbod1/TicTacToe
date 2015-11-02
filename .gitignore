@@ -1,7 +1,11 @@
 *.class
+.gradle/
 
 # Bin folder
 bin/
+
+# Build folder
+build/
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
