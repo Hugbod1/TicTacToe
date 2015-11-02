@@ -1,6 +1,7 @@
-###### Computer Department								
-###### Hugbúnaðarfæði 
-###### Late-term Assignment 
+Computer Department								
+Hugbúnaðarfæði 
+Late-term Assignment 
+
 #### Hugboð
 
 ----
@@ -18,7 +19,9 @@ Create Github account if you don‘t already have one. You should clone the git 
 git clone https://github.com/Hugbod1/TicTacToe.git
 ```
 -
+
 More to come!
+
 -
 
 
