@@ -12,7 +12,19 @@ public class Service
 	}
 
 	public void UpdateBoard(int row, int col) {
-		
+		if(!IsLegalTic(row, col)) {
+			// not a legal move
+			return;
+		}
+		board[row][col] = player;
+
+		// swap current player
+		if(player == 'X') {
+			player = 'O';
+		}
+		else {
+			player = 'X';
+		}
 	}
 
 	public boolean CheckForWin() {

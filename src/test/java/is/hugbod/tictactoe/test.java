@@ -111,5 +111,28 @@ public class test{
 		assertFalse(test.CheckForWin());
 	}
 
+	// Test correct update of board
+	@Test
+	public void testUpdateBoard(){
+		Service test = new Service();
+		// get the current player
+		char player = test.player;
+		// update one field with current player mark
+		test.UpdateBoard(1,1);
+		assertEquals(player, test.board[1][1]);
+		// update another field with next player
+		player = test.player;
+		test.UpdateBoard(0,1);
+		assertEquals(player, test.board[0][1]);
+		// try illegal move (same as previous player)
+		// No need to update player here since the field should NOT change
+		test.UpdateBoard(0,1);
+		assertEquals(player, test.board[0][1]);
+		// try another field!
+		player = test.player;
+		test.UpdateBoard(2,1);
+		assertEquals(player, test.board[2][1]);
+	}
+
 }
 
