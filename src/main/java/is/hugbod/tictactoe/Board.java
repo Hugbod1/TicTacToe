@@ -24,7 +24,7 @@ public class Board{
 		if(CheckHorizontal() == true || CheckDiagonal() == true || CheckVertical == true){
 			return true;
 		}
-		return false
+		return false;
 	}
 
 	public boolean CheckForFullBoard(){
