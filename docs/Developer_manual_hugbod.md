@@ -1,6 +1,14 @@
+Computer Department								
 Hugbúnaðarfæði 
-Síðannarverkefni 2015 
-# Hugboð - Tic Tac Toe
+Late-term Assignment 
+#### Hugboð
+
+----
+
+![RU logo](http://www.ru.is/skin/basic9k/i/sitelogo.png)
+
+
+
 ## Development Manual
 In the development manual you will find the following: 
 - Where you can access the source code
@@ -84,3 +92,5 @@ TDD (Test Driven Development) where made through the whole process using unit te
 ###### Functional testing
 Since it was decided to create a web application an  end-to-end testing were made for functional testing, using [Selenium](http://www.seleniumhq.org/projects/ide/). The Selenium tests are a little bit time-expensive. The pros about Selenium is that it generates automated tests, gives a rapid feedback and exports the tests in java code. Selenium only runs on Firefox browser.
 
+---
+*Copyright © 2015 - Hugboð Development*
