@@ -1,6 +1,3 @@
 language: java
 jdk: oraclejdk8
-deploy:
-  provider: heroku
-  api_key:
-    secure: 21d2a069-f7ad-4c36-a240-cfa2de002280
+
