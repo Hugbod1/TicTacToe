@@ -15,4 +15,4 @@ The most awesome TicTacToe game ever
 - Sölvi Már Benediktsson
 
 ---
-*Copyright © - Hugboð Development *
+*Copyright © 2015 - Hugboð Development*
