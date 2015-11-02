@@ -37,5 +37,64 @@ public class test{
 		assertFalse(test.IsLegalTic(1,1));
 	}
 
+	// Test for horizontal win
+	@Test
+	public void testCheckForWin(){
+		Service test = new Service();
+		test.board[1][0] = 'X';
+		test.board[1][1] = 'X';
+		test.board[1][2] = 'X';
+		// win for 'X'
+		assertTrue(test.CheckForWin());
+
+		test.board[1][0] = 'O';
+		test.board[1][1] = 'O';
+		test.board[1][2] = 'O';
+		// win for 'O'
+		assertTrue(test.CheckForWin());
+	}
+
+	// Test for vertical win
+	@Test
+	public void testCheckForWin2(){
+		Service test = new Service();
+		test.board[0][0] = 'X';
+		test.board[1][0] = 'X';
+		test.board[2][0] = 'X';
+		// win for 'X'
+		assertTrue(test.CheckForWin());
+
+		test.board[0][0] = 'O';
+		test.board[1][0] = 'O';
+		test.board[2][0] = 'O';
+		// win for 'O'
+		assertTrue(test.CheckForWin());
+	}
+
+	// Test for diagonal win
+	@Test
+	public void testCheckForWin3(){
+		Service test = new Service();
+		test.board[0][0] = 'X';
+		test.board[1][1] = 'X';
+		test.board[2][2] = 'X';
+		// win for 'X'
+		assertTrue(test.CheckForWin());
+
+		test.board[2][0] = 'O';
+		test.board[1][1] = 'O';
+		test.board[0][2] = 'O';
+		// win for 'O'
+		assertTrue(test.CheckForWin());
+	}
+
+	// Test for no win
+	@Test
+	public void testCheckForWin4(){
+		Service test = new Service();
+		// Empty board tested
+		assertFalse(test.CheckForWin());
+	}
+
 }
 
