@@ -26,6 +26,6 @@ dependencies {
 }
 
 task stage{
-	dependsON build
+	dependsOn installDist
 }
 
