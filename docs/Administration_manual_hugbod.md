@@ -13,8 +13,9 @@ Late-term Assignment
 ## Administration Manual
 
 ##### About
-In the administration manual you will find how to set the project up on a server, to do that you should first set git up on your computer. 
-Create Github account if you don‘t already have one. You should clone the git repository into your computer by typing the following command: 
+In the administration manual you will find how to build and deploy the project. To do that you should first set git up on your computer. 
+
+Create Github account if you don't already have one. You then need to clone the git repository into your computer by typing the following command in your terminal: 
 ```
 git clone https://github.com/Hugbod1/TicTacToe.git
 ```
