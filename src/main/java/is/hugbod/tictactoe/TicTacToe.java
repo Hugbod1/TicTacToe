@@ -1,9 +1,28 @@
-
 package is.hugbod.tictactoe;
 
-public class TicTacToe {
-	public static void main(String[] args){
-		System.out.println("Hello TicTacToe Lovers");
-	
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class TicTacToe implements ActionListener {
+
+	Service service;
+	JFrame frame;
+
+	public TicTacToe() {
+
+	}
+
+	public void play() {
+
+	}
+
+	private void Tic() {
+
+	}
+
+	private void Reset() {
+
 	}
 }
