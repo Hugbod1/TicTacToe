@@ -7,7 +7,7 @@ public class Service
 
 	public Service() {
 		board = new char[3][3];
-		char player = "X";
+		char player = 'X';
 	}
 
 	public void UpdateBoard(int row, int col) {
