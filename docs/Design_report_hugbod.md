@@ -1,8 +1,8 @@
 Computer Department								
 Hugbúnaðarfæði 
 Late-term Assignment 
-#### Hugboð
 
+#### Hugboð
 ----
 
 ![RU logo](http://www.ru.is/skin/basic9k/i/sitelogo.png)
@@ -33,4 +33,4 @@ We decided to develope the project on both local- and virtual machines to make i
 The intention for the class TicTacToe is to contain the game loop as well as the elements affecting and communicating with the Jframe user interface. The Service class should handle the business logic of the game.
 
 ---
-*Copyright © - Hugboð Development*
+*Copyright © 2015 - Hugboð Development*

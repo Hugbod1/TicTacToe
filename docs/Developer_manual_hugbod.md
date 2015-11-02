@@ -1,6 +1,7 @@
 Computer Department								
 Hugbúnaðarfæði 
 Late-term Assignment 
+
 #### Hugboð
 
 ----
@@ -10,6 +11,9 @@ Late-term Assignment
 
 
 ## Development Manual
+
+##### About
+
 In the development manual you will find the following: 
 - Where you can access the source code
 - What tools were used in this project
@@ -20,12 +24,12 @@ In the development manual you will find the following:
 ##### Source Control Client
 [Github](https://github.com) was used to support our tools, libraries, documentation and everything else related to this project.
 ##### Source code
-The source code, on Gihub, can be found here [Hugboð - TicTacToe](https://github.com/Hugbod1/TicTacToe.git)
+The source code, on Github, can be found here [Hugboð - TicTacToe](https://github.com/Hugbod1/TicTacToe.git)
 ##### Build environment:
 
-To build the project you will:
-- need to install Java 1.8
-- need a Github account
+To build the project you will need to:
+- install Java 1.8
+- have a Github account
 - install git on the computer 
 
 To install java, type the following into your terminal window:
@@ -78,19 +82,17 @@ bin/run
 
 It as simple as that. 
 
-If you would like to access the web application, run the applicationand and simply click on the URL below:
-http://.......... (Create link here)
-
+##### Tools
 
 [Gradle](https://docs.gradle.org/current/userguide/build_environment.html) was used to execute the builds in this project. Gradle is consistent environment that can optimize the speed. 
-##### Tools
+
 For continuous integration, [Travis](https://travis-ci.org/) was used to build and test the project that is hosted at GitHub.
 ##### Testing 
 
 ###### Unit test
 TDD (Test Driven Development) where made through the whole process using unit tests. Unit testing is a part of the build process and it is important that they run fast, they are short code fragments that are created by the programmers.
 ###### Functional testing
-Since it was decided to create a web application an  end-to-end testing were made for functional testing, using [Selenium](http://www.seleniumhq.org/projects/ide/). The Selenium tests are a little bit time-expensive. The pros about Selenium is that it generates automated tests, gives a rapid feedback and exports the tests in java code. Selenium only runs on Firefox browser.
+More to come
 
 ---
 *Copyright © 2015 - Hugboð Development*
