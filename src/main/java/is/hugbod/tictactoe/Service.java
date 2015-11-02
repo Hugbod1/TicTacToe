@@ -36,7 +36,7 @@ public class Service
 	}
 	
 	public boolean IsLegalTic(int row, int col) {
-		return false;
+		return board[row][col] == '-';
 	}
 	
 	public void ResetBoard() {

@@ -21,5 +21,21 @@ public class test{
 			} 
 		}
 	}
+	
+	// Test for legal tic
+	@Test
+	public void testIsLegalTic(){
+		Service test = new Service();
+		assertTrue(test.IsLegalTic(1,1));
+	}
+
+	// Test for illegal tic
+	@Test
+	public void testIsLegalTic2(){
+		Service test = new Service();
+		test.board[1][1] = 'X';
+		assertFalse(test.IsLegalTic(1,1));
+	}
+
 }
 
