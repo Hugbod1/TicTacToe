@@ -22,22 +22,36 @@ public class TicTacToe implements ActionListener {
 		board = new JButton[3][3];
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
-				board[i][j] = new JButton("-");
+				board[i][j] = new JButton("");
 				frame.getContentPane().add(board[i][j]);
 				board[i][j].addActionListener(this);
 			}
 		}
+		Display();
 	}
 
-	public static void play() {
-
+	@Override
+	public void actionPerformed(ActionEvent e)
+	{
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				if(e.getSource()==board[i][j]) {
+				service.UpdateBoard(i, j);
+				}
+			}
+		}
+		Display();
 	}
 
-	public void actionPerformed(ActionEvent e) {
-
+	private void Display() {
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				board[i][j].setText("" + service.board[i][j]);
+			} 
+		}
 	}
 
 	private void Reset() {
-
+		
 	}
 }

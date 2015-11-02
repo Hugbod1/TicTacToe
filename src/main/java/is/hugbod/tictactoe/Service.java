@@ -7,7 +7,7 @@ public class Service
 
 	public Service() {
 		board = new char[3][3];
-		char player = 'X';
+		player = 'X';
 		ResetBoard();
 	}
 
@@ -66,7 +66,7 @@ public class Service
 	}
 	
 	public boolean IsLegalTic(int row, int col) {
-		return board[row][col] == '-';
+		return ((board[row][col] != 'X') && (board[row][col] != 'O'));
 	}
 	
 	public void ResetBoard() {
