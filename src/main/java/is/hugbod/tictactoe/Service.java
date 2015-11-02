@@ -8,6 +8,7 @@ public class Service
 	public Service() {
 		board = new char[3][3];
 		char player = 'X';
+		ResetBoard();
 	}
 
 	public void UpdateBoard(int row, int col) {
@@ -34,11 +35,16 @@ public class Service
 		return false;
 	}
 	
-	private boolean IsLegalTic(int row, int col) {
+	public boolean IsLegalTic(int row, int col) {
 		return false;
 	}
 	
 	public void ResetBoard() {
-	
+		// Board set to zero
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				board[i][j] = '-';
+			} 
+		}
 	}
 }
