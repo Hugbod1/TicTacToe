@@ -18,7 +18,7 @@ public class TicTacToe implements ActionListener {
 
 	}
 
-	private void Tic() {
+	public void actionPerformed(ActionEvent e) {
 
 	}
 
