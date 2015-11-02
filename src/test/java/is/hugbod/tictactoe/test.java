@@ -37,6 +37,21 @@ public class test{
 		assertFalse(test.IsLegalTic(1,1));
 	}
 
+	@Test
+	public void CheckForFullBoard(){
+		Service test = new Service();
+		// Empty board tested
+		assertFalse(test.CheckForFullBoard());
+		
+		// Board filled with 'X'
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				test.board[i][j] = 'X';
+			} 
+		}
+		assertTrue(test.CheckForFullBoard());
+	}
+
 	// Test for horizontal win
 	@Test
 	public void testCheckForWin(){
