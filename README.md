@@ -2,3 +2,17 @@
 
 # TicTacToe
 The most awesome TicTacToe game ever
+
+----
+
+**Team-members:**
+
+Alexander Björnsson
+Arnór Brynjólfsson 
+Kristinn Heiðar Freysteinsson
+Raquelíta Rós Aguilar	
+Snorri Hjörvar Jóhannsson
+Sölvi Már Benediktsson
+
+---
+*Copyright © - Hugboð Development *
