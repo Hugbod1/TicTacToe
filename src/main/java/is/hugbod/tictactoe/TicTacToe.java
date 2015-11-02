@@ -7,14 +7,14 @@ import java.awt.event.ActionListener;
 
 public class TicTacToe implements ActionListener {
 
-	Service service;
+	static Service service;
 	JFrame frame;
 
 	public TicTacToe() {
 
 	}
 
-	public void play() {
+	public static void play() {
 
 	}
 
