@@ -15,6 +15,7 @@ public class TicTacToe implements ActionListener {
 		JFrame frame = new JFrame("Tic Tac Toe by Hugboð");
 		frame.setMinimumSize(new Dimension(550, 500));
 		frame.setMaximumSize(new Dimension(600, 500));
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLayout(new GridLayout(3, 3));
 		frame.setLocation(500, 200);
 		frame.setVisible(true);
