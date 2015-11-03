@@ -42,11 +42,15 @@ public class TicTacToe implements ActionListener {
 		}
 		Display();
 		if(service.CheckForWin()) {
-			Reset();
+			DisplayResult(service.player + " wins!");
 		}
-		if(service.CheckForFullBoard()) {
-			Reset();
+		else if(service.CheckForFullBoard()) {
+			DisplayResult("Draw!");
 		}
+	}
+
+	private void DisplayResult(String result) {
+
 	}
 
 	private void Display() {
