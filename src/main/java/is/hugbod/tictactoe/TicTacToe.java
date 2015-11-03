@@ -12,7 +12,7 @@ public class TicTacToe implements ActionListener {
 	JButton[][] board;
 	
 	public TicTacToe() {
-		JFrame frame = new JFrame("Tic Tac Toe by Hugboð");
+		frame = new JFrame("Tic Tac Toe by Hugboð");
 		frame.setMinimumSize(new Dimension(550, 500));
 		frame.setMaximumSize(new Dimension(600, 500));
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
