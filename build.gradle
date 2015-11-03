@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'gradle-one-jar'
-
+apply plugin: 'checkstyle'
 
 mainClassName = "is.hugbod.tictactoe.TicTacToe"
 
@@ -33,4 +33,6 @@ task buildFatJar(type: OneJar) {
     archiveName = 'TicTacToe-standalone.jar'
 }
 
-
+checkstyle {
+    configFile = 'checkstyle.xml' as File
+}
