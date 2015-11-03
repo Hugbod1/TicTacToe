@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Random;
 
 public class TicTacToe implements ActionListener {
 
@@ -45,14 +44,9 @@ public class TicTacToe implements ActionListener {
 			}
 		}
 		display();
-		if(service.checkForWin()) {
-			displayResult(service.player);
-		}
-		else if(service.checkForFullBoard()) {
-			displayResult('D');
-		}
+		endConditions();
 
-		if(singleplayer) {
+		if(singleplayer && !service.checkForWin() && !service.checkForFullBoard()) {
 			// Let the AI play one move for 'O'
 			aiTic();
 		}
@@ -63,11 +57,14 @@ public class TicTacToe implements ActionListener {
 		if(result == 'D') {
 			resultmsg = "Match is draw!";
 		}
-		if(result == 'X') {
+		else if(result == 'X') {
 			resultmsg = "Circle wins!";
 		}
-		else {
+		else if(result == 'O') {
 			resultmsg = "Cross wins!";
+		}
+		else {
+			resultmsg = "WHAT?";
 		}
 		Object[] options = {"Rematch", "No, thanks"};
 		int n = JOptionPane.showOptionDialog(
@@ -103,9 +100,16 @@ public class TicTacToe implements ActionListener {
 	private void aiTic() {
 		service.aiTic();
 		display();
+		endConditions();
+	}
+	
+	// check for end conditions
+	private void endConditions() {
+		// check if there is a winner
 		if(service.checkForWin()) {
 			displayResult(service.player);
 		}
+		// check if there is a draw (full board and no winner)
 		else if(service.checkForFullBoard()) {
 			displayResult('D');
 		}
