@@ -13,7 +13,7 @@ public class test{
 	@Test
 	public void testResetBoard(){
 		Service test = new Service();
-		test.ResetBoard();
+		test.resetBoard();
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				// Assert for each square that they are '-'
@@ -26,7 +26,7 @@ public class test{
 	@Test
 	public void testIsLegalTic(){
 		Service test = new Service();
-		assertTrue(test.IsLegalTic(1,1));
+		assertTrue(test.isLegalTic(1,1));
 	}
 
 	// Test for illegal tic
@@ -34,14 +34,14 @@ public class test{
 	public void testIsLegalTic2(){
 		Service test = new Service();
 		test.board[1][1] = 'X';
-		assertFalse(test.IsLegalTic(1,1));
+		assertFalse(test.isLegalTic(1,1));
 	}
 
 	@Test
-	public void CheckForFullBoard(){
+	public void checkForFullBoard(){
 		Service test = new Service();
 		// Empty board tested
-		assertFalse(test.CheckForFullBoard());
+		assertFalse(test.checkForFullBoard());
 		
 		// Board filled with 'X'
 		for(int i = 0; i < 3; i++) {
@@ -49,7 +49,7 @@ public class test{
 				test.board[i][j] = 'X';
 			} 
 		}
-		assertTrue(test.CheckForFullBoard());
+		assertTrue(test.checkForFullBoard());
 	}
 
 	// Test for horizontal win
@@ -60,13 +60,13 @@ public class test{
 		test.board[1][1] = 'X';
 		test.board[1][2] = 'X';
 		// win for 'X'
-		assertTrue(test.CheckForWin());
+		assertTrue(test.checkForWin());
 
 		test.board[1][0] = 'O';
 		test.board[1][1] = 'O';
 		test.board[1][2] = 'O';
 		// win for 'O'
-		assertTrue(test.CheckForWin());
+		assertTrue(test.checkForWin());
 	}
 
 	// Test for vertical win
@@ -77,13 +77,13 @@ public class test{
 		test.board[1][0] = 'X';
 		test.board[2][0] = 'X';
 		// win for 'X'
-		assertTrue(test.CheckForWin());
+		assertTrue(test.checkForWin());
 
 		test.board[0][0] = 'O';
 		test.board[1][0] = 'O';
 		test.board[2][0] = 'O';
 		// win for 'O'
-		assertTrue(test.CheckForWin());
+		assertTrue(test.checkForWin());
 	}
 
 	// Test for diagonal win
@@ -94,13 +94,13 @@ public class test{
 		test.board[1][1] = 'X';
 		test.board[2][2] = 'X';
 		// win for 'X'
-		assertTrue(test.CheckForWin());
+		assertTrue(test.checkForWin());
 
 		test.board[2][0] = 'O';
 		test.board[1][1] = 'O';
 		test.board[0][2] = 'O';
 		// win for 'O'
-		assertTrue(test.CheckForWin());
+		assertTrue(test.checkForWin());
 	}
 
 	// Test for no win
@@ -108,7 +108,7 @@ public class test{
 	public void testCheckForWin4(){
 		Service test = new Service();
 		// Empty board tested
-		assertFalse(test.CheckForWin());
+		assertFalse(test.checkForWin());
 	}
 
 	// Test correct update of board
@@ -118,19 +118,19 @@ public class test{
 		// get the current player
 		char player = test.player;
 		// update one field with current player mark
-		test.UpdateBoard(1,1);
+		test.updateBoard(1,1);
 		assertEquals(player, test.board[1][1]);
 		// update another field with next player
 		player = test.player;
-		test.UpdateBoard(0,1);
+		test.updateBoard(0,1);
 		assertEquals(player, test.board[0][1]);
 		// try illegal move (same as previous player)
 		// No need to update player here since the field should NOT change
-		test.UpdateBoard(0,1);
+		test.updateBoard(0,1);
 		assertEquals(player, test.board[0][1]);
 		// try another field!
 		player = test.player;
-		test.UpdateBoard(2,1);
+		test.updateBoard(2,1);
 		assertEquals(player, test.board[2][1]);
 	}
 

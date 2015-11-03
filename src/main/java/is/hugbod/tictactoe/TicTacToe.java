@@ -28,7 +28,7 @@ public class TicTacToe implements ActionListener {
 				board[i][j].addActionListener(this);
 			}
 		}
-		Display();
+		display();
 	}
 
 	@Override
@@ -37,20 +37,20 @@ public class TicTacToe implements ActionListener {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				if(e.getSource()==board[i][j]) {
-				service.UpdateBoard(i, j);
+				service.updateBoard(i, j);
 				}
 			}
 		}
-		Display();
-		if(service.CheckForWin()) {
-			DisplayResult(service.player + " wins!");
+		display();
+		if(service.checkForWin()) {
+			displayResult(service.player + " wins!");
 		}
-		else if(service.CheckForFullBoard()) {
-			DisplayResult("Draw!");
+		else if(service.checkForFullBoard()) {
+			displayResult("Draw!");
 		}
 	}
 
-	private void DisplayResult(String result) {
+	private void displayResult(String result) {
 		Object[] options = {"Rematch", "No, thanks"};
 		int n = JOptionPane.showOptionDialog(
 			null,
@@ -62,14 +62,14 @@ public class TicTacToe implements ActionListener {
 			options,
 			options[1]);
 		if(n == 0) {
-			Reset();
+			reset();
 		}
 		else {
 			frame.dispose();
 		}
 	}
 
-	private void Display() {
+	private void display() {
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				board[i][j].setText("" + service.board[i][j]);
@@ -77,8 +77,8 @@ public class TicTacToe implements ActionListener {
 		}
 	}
 
-	private void Reset() {
-		service.ResetBoard();
-		Display();
+	private void reset() {
+		service.resetBoard();
+		display();
 	}
 }

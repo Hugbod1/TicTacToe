@@ -7,11 +7,11 @@ public class Service
 
 	public Service() {
 		board = new char[3][3];
-		ResetBoard();
+		resetBoard();
 	}
 
-	public void UpdateBoard(int row, int col) {
-		if(!IsLegalTic(row, col)) {
+	public void updateBoard(int row, int col) {
+		if(!isLegalTic(row, col)) {
 			// not a legal move
 			return;
 		}
@@ -26,11 +26,11 @@ public class Service
 		}
 	}
 
-	public boolean CheckForWin() {
-		return (CheckDiagonal() || CheckVertical() || CheckHorizontal());
+	public boolean checkForWin() {
+		return (checkDiagonal() || checkVertical() || checkHorizontal());
 	}
 
-	public boolean CheckForFullBoard() {
+	public boolean checkForFullBoard() {
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				if(board[i][j] == '-') {
@@ -41,12 +41,12 @@ public class Service
 	return true;
 	}
 	
-	private boolean CheckDiagonal() {
+	private boolean checkDiagonal() {
 		return (((board[1][1] != '-') && (((board[0][0] == board[1][1]) && (board[1][1] == board[2][2])) ||
 				((board[0][2] == board[1][1]) && (board[1][1] == board[2][0])))));
 	}
 	
-	private boolean CheckVertical() {
+	private boolean checkVertical() {
 		for(int i = 0; i < 3; i++) {
 			if(board[0][i] != '-' && board[0][i] == board[1][i] && board[1][i] == board[2][i]) {
 				return true;
@@ -55,7 +55,7 @@ public class Service
 		return false;
 	}
 	
-	private boolean CheckHorizontal() {
+	private boolean checkHorizontal() {
 		for(int i = 0; i < 3; i++) {
 			if(board[i][0] != '-' && board[i][0] == board[i][1] && board[i][1] == board[i][2]) {
 				return true;
@@ -64,11 +64,11 @@ public class Service
 		return false;
 	}
 	
-	public boolean IsLegalTic(int row, int col) {
+	public boolean isLegalTic(int row, int col) {
 		return ((board[row][col] != 'X') && (board[row][col] != 'O'));
 	}
 	
-	public void ResetBoard() {
+	public void resetBoard() {
 		// Board set to zero
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
