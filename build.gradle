@@ -1,5 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
+apply plugin: 'gradle-one-jar'
+
 
 mainClassName = "is.hugbod.tictactoe.TicTacToe"
 
@@ -16,4 +18,19 @@ dependencies {
 task stage{
 	dependsOn installDist
 }
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.github.rholder:gradle-one-jar:1.0.4'
+    }
+}
+
+task buildFatJar(type: OneJar) {
+    mainClass = 'is.hugbod.tictactoe.TicTacToe'
+    archiveName = 'TicTacToe-standalone.jar'
+}
+
 
