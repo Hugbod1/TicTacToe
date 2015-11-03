@@ -22,19 +22,19 @@ In the development manual you will find the following:
 - How to build the project
 
 ##### Source Control Client
-[Github](https://github.com) was used to support our tools, libraries, documentation and everything else related to this project.
+[Github](https://github.com) is used to support the tools, libraries, documentation and everything else related to this project.
 ##### Source code
 The source code, on Github, can be found here [Hugboð - TicTacToe](https://github.com/Hugbod1/TicTacToe.git)
 ##### Build environment:
 
-To build the project you will need to:
+To build the project on your favourite Linux bash you will need to:
 - install Java 1.8
 - have a Github account
 - install git on the computer 
 
 To install java, type the following into your terminal window:
 ```
-sudo apt-get install maven
+sudo apt-get install oracle-java8-installer
 ```
 Next, install git on your computer:
 
@@ -69,13 +69,14 @@ When your are done with that, clone the git repository for the project into your
 ```
 git clone https://github.com/Hugbod1/TicTacToe.git
 ```
+
 Now you can start working on that project.
 
-You should try to test and build the project with the command:
+You should try to test- and build the project with the command:
 ```
 bin/package
 ```
-Then you can run it by typing:
+Then can run it by typing:
 ```
 bin/run
 ```
@@ -84,15 +85,14 @@ It as simple as that.
 
 ##### Tools
 
-[Gradle](https://docs.gradle.org/current/userguide/build_environment.html) was used to execute the builds in this project. Gradle is consistent environment that can optimize the speed. 
+[Gradle](https://docs.gradle.org/current/userguide/build_environment.html) is used to execute the builds in this project. Gradle is consistent environment that can optimize the speed. 
 
-For continuous integration, [Travis](https://travis-ci.org/) was used to build and test the project that is hosted at GitHub.
-##### Testing 
+For continuous integration, [Travis](https://travis-ci.org/) was is to build and test the project that is hosted at GitHub.
+To access Travis, request access to become collaborator.
+
 
 ###### Unit test
 TDD (Test Driven Development) where made through the whole process using unit tests. Unit testing is a part of the build process and it is important that they run fast, they are short code fragments that are created by the programmers.
-###### Functional testing
-More to come
 
 ---
 *Copyright © 2015 - Hugboð Development*
