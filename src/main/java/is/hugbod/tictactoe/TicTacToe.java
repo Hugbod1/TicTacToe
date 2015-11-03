@@ -43,18 +43,28 @@ public class TicTacToe implements ActionListener {
 		}
 		display();
 		if(service.checkForWin()) {
-			displayResult(service.player + " wins!");
+			displayResult(service.player);
 		}
 		else if(service.checkForFullBoard()) {
-			displayResult("Draw!");
+			displayResult('D');
 		}
 	}
 
-	private void displayResult(String result) {
+	private void displayResult(char result) {
+		String resultmsg;
+		if(result == 'D') {
+			resultmsg = "Match is draw!";
+		}
+		if(result == 'X') {
+			resultmsg = "Circle wins!";
+		}
+		else {
+			resultmsg = "Cross wins!";
+		}
 		Object[] options = {"Rematch", "No, thanks"};
 		int n = JOptionPane.showOptionDialog(
 			null,
-			result, 
+			resultmsg, 
 			"Result",
 			JOptionPane.YES_NO_OPTION, 
 			JOptionPane.QUESTION_MESSAGE,
