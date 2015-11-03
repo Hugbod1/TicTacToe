@@ -11,6 +11,7 @@ public class TicTacToe implements ActionListener {
 	static Service service;
 	JFrame frame;
 	JButton[][] board;
+	boolean singleplayer = false;
 	
 	public TicTacToe() {
 		frame = new JFrame("Tic Tac Toe by Hugboð");
@@ -29,6 +30,7 @@ public class TicTacToe implements ActionListener {
 				board[i][j].addActionListener(this);
 			}
 		}
+		playingMode();
 		display();
 	}
 
@@ -49,8 +51,11 @@ public class TicTacToe implements ActionListener {
 		else if(service.checkForFullBoard()) {
 			displayResult('D');
 		}
-		// Let the AI play one move for 'O'
-		aiTic();
+
+		if(singleplayer) {
+			// Let the AI play one move for 'O'
+			aiTic();
+		}
 	}
 
 	private void displayResult(char result) {
@@ -106,6 +111,26 @@ public class TicTacToe implements ActionListener {
 		}
 		else if(service.checkForFullBoard()) {
 			displayResult('D');
+		}
+	}
+
+	
+	private void playingMode() {
+		Object[] options = {"Single Player", "2 Player"};
+		int n = JOptionPane.showOptionDialog(
+			null,
+			"vs computer or player?", 
+			"Result",
+			JOptionPane.YES_NO_OPTION, 
+			JOptionPane.QUESTION_MESSAGE,
+			null,
+			options,
+			options[1]);
+		if(n == 0) {
+			singleplayer = true;
+		}
+		else {
+			singleplayer = false;
 		}
 	}
 }
