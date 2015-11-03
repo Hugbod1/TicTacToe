@@ -28,7 +28,7 @@ We decided to develop the project on both local- and virtual machines to make it
 ##### Class Diagram for Tic Tac Toe
 -
 
-![class_diagram.png](https://www.dropbox.com/home/h%C3%A1sk%C3%B3li%20reykjav%C3%ADkur/haust_2015/hugb%C3%BAna%C3%B0arfr%C3%A6%C3%B0i/Seinni_hluti/S%C3%AD%C3%B0annarverkefni?preview=Class+Diagram.png "Class Diagram")
+![class_diagram.png](http://oi64.tinypic.com/fa8ro7.jpg" Class Diagram")
 
 The intention for the class TicTacToe is to contain the elements affecting and communicating with the Jframe user interface while having the Service class handle the business logic of the game.
 
