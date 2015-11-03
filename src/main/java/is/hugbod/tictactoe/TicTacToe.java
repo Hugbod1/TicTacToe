@@ -50,7 +50,22 @@ public class TicTacToe implements ActionListener {
 	}
 
 	private void DisplayResult(String result) {
-
+		Object[] options = {"Rematch", "No, thanks"};
+		int n = JOptionPane.showOptionDialog(
+			null,
+			result, 
+			"Result",
+			JOptionPane.YES_NO_OPTION, 
+			JOptionPane.QUESTION_MESSAGE,
+			null,
+			options,
+			options[1]);
+		if(n == 0) {
+			Reset();
+		}
+		else {
+			frame.dispose();
+		}
 	}
 
 	private void Display() {
