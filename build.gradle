@@ -17,3 +17,9 @@ task stage{
 	dependsOn installDist
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName,
+            'Class-Path': configurations.runtime.files.collect {"$it.name"}.join(' ')
+    }
+}

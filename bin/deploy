@@ -1,14 +1,23 @@
 #!/bin/bash -e
 
 APP="TicTacToe"
+version=""
+echo -n "Enter version > "
+read version
+echo "Version number is $version"
+APPVERSION="TicTacToe-$version"
 
 # Always deploy new version, clean before
 bin/clean
 bin/package
 
 # If the installation folder exists under /tmp, remove it
-test -f /tmp/${APP} && rm -r /tmp/${APP}
-cp -r build/install/${APP} /tmp
+test -f /tmp/${APPVERSION} && rm -r /tmp/${APPVERSION}
+cp -r build/install/${APP} /tmp/${APPVERSION}
+mkdir -p /tmp/${APPVERSION}/${APPVERSION}
+cp -r build/distributions/* /tmp/${APPVERSION}/${APPVERSION}
+
+bin/./dropbox_uploader.sh upload /tmp/${APPVERSION}/${APPVERSION} /${APPVERSION}
 
 # Run application once
-/tmp/${APP}/bin/${APP}
+/tmp/${APPVERSION}/bin/${APP}
