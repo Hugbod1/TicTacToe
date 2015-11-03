@@ -121,7 +121,6 @@ public class TicTacToe implements ActionListener {
 		}
 	}
 
-
 	private void playingMode() {
 		Object[] options = {"Single Player", "2 Player"};
 		int n = JOptionPane.showOptionDialog(
@@ -139,6 +138,7 @@ public class TicTacToe implements ActionListener {
 			singleplayer = false;
 		}
 	}
+
 	public static void main(final String[] args) {
 		TicTacToe game = new TicTacToe();
 	}

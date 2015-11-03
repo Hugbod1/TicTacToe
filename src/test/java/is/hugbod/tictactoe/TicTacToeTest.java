@@ -146,6 +146,4 @@ public class TicTacToeTest {
 		test.aiTic();
 		assertFalse(player == test.getCurrentPlayer());
 	}
-
 }
-
