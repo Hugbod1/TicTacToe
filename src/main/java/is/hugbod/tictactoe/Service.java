@@ -35,12 +35,7 @@ public class Service {
 	public final char getBoard(final int row, final int col) {
 		return board[row][col];
 	}
-/*
-	// Sets the player as a certain value. Only for unit tests
-	public void setPlayer(char value) {
-		player = value;
-	}
-*/
+
 	public final char getCurrentPlayer() {
 		return player;
 	}
