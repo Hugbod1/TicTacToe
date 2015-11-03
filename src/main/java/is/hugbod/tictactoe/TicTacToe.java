@@ -41,17 +41,43 @@ public class TicTacToe implements ActionListener {
 			}
 		}
 		Display();
+		if(service.CheckForWin()) {
+			DisplayResult(service.player + " wins!");
+		}
+		else if(service.CheckForFullBoard()) {
+			DisplayResult("Draw!");
+		}
+	}
+
+	private void DisplayResult(String result) {
+		Object[] options = {"Rematch", "No, thanks"};
+		int n = JOptionPane.showOptionDialog(
+			null,
+			result, 
+			"Result",
+			JOptionPane.YES_NO_OPTION, 
+			JOptionPane.QUESTION_MESSAGE,
+			null,
+			options,
+			options[1]);
+		if(n == 0) {
+			Reset();
+		}
+		else {
+			frame.dispose();
+		}
 	}
 
 	private void Display() {
 		for(int i = 0; i < 3; i++) {
 			for(int j = 0; j < 3; j++) {
 				board[i][j].setText("" + service.board[i][j]);
-			} 
+			}
 		}
 	}
 
 	private void Reset() {
-		
+		service.ResetBoard();
+		Display();
 	}
 }
