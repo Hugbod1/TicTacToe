@@ -1,5 +1,5 @@
 Computer Department								
-Hugbúnaðarfæði 
+Hugbúnaðarfæði -
 Late-term Assignment 
 
 #### Hugboð
