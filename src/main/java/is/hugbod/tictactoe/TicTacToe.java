@@ -136,4 +136,7 @@ public class TicTacToe implements ActionListener {
 			singleplayer = false;
 		}
 	}
+	public static void main(String[] args) {
+		TicTacToe game = new TicTacToe();
+	}
 }
