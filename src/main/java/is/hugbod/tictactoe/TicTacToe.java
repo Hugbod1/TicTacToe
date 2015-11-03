@@ -7,6 +7,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 public class TicTacToe implements ActionListener {
 
@@ -37,6 +38,8 @@ public class TicTacToe implements ActionListener {
 				board[i][j] = new JButton("");
 				frame.getContentPane().add(board[i][j]);
 				board[i][j].addActionListener(this);
+				board[i][j].setContentAreaFilled(false);
+				board[i][j].setOpaque(true);
 			}
 		}
 		playingMode();
@@ -55,9 +58,10 @@ public class TicTacToe implements ActionListener {
 			}
 		}
 		display();
-		endConditions();
 
-		if (legal && singleplayer && !service.checkForWin() && !service.checkForFullBoard()) {
+		// legal = true if player has made a move
+		// endConditions runs and checks for win / tie
+		if (!endConditions() && singleplayer && legal) {
 			// Let the AI play one move for 'O'
 			aiTic();
 		}
@@ -72,7 +76,7 @@ public class TicTacToe implements ActionListener {
 		} else if (result == 'O') {
 			resultmsg = "Cross wins!";
 		} else {
-			resultmsg = "WHAT?";
+			resultmsg = "Encountered some error, would you like a rematch?";
 		}
 		Object[] options = {"Rematch", "No, thanks"};
 		int n = JOptionPane.showOptionDialog(
@@ -95,6 +99,13 @@ public class TicTacToe implements ActionListener {
 		for (int i = 0; i < boardSize; i++) {
 			for (int j = 0; j < boardSize; j++) {
 				board[i][j].setText("" + service.getBoard(i, j));
+				if (service.getBoard(i, j) == 'X') {
+					board[i][j].setBackground(Color.RED);
+				} else if (service.getBoard(i, j) == 'O') {
+					board[i][j].setBackground(Color.BLUE);
+				} else {
+					board[i][j].setBackground(null);
+				}
 			}
 		}
 	}
@@ -111,16 +122,18 @@ public class TicTacToe implements ActionListener {
 	}
 
 	// check for end conditions
-	private void endConditions() {
+	private boolean endConditions() {
 		// check if there is a winner
 		if (service.checkForWin()) {
 			displayResult(service.getCurrentPlayer());
+			return true;
 		} else if (service.checkForFullBoard()) {
 			// check if there is a draw (full board and no winner)
 			displayResult('D');
+			return true;
 		}
+		return false;
 	}
-
 
 	private void playingMode() {
 		Object[] options = {"Single Player", "2 Player"};
