@@ -36,9 +36,11 @@ public class TicTacToe implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e)
 	{
+		boolean legal = false;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				if(e.getSource()==board[i][j]) {
+				legal = service.isLegalTic(i, j);
 				service.updateBoard(i, j);
 				}
 			}
@@ -46,7 +48,7 @@ public class TicTacToe implements ActionListener {
 		display();
 		endConditions();
 
-		if(singleplayer && !service.checkForWin() && !service.checkForFullBoard()) {
+		if(legal && singleplayer && !service.checkForWin() && !service.checkForFullBoard()) {
 			// Let the AI play one move for 'O'
 			aiTic();
 		}
@@ -133,5 +135,8 @@ public class TicTacToe implements ActionListener {
 		else {
 			singleplayer = false;
 		}
+	}
+	public static void main(String[] args) {
+		TicTacToe game = new TicTacToe();
 	}
 }
