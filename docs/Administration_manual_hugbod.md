@@ -12,7 +12,7 @@ Late-term Assignment
 
 ## Administration Manual
 
-##### About
+#### About
 In the administration manual you will find how to build and deploy the project. To do that you should first set git up on your computer. 
 
 ##### Versioning the releases
@@ -26,18 +26,16 @@ Example:
 - Major version, available for users - 1.0.0
 - Minor version, only for beta testing - 0.1.0
 - Patch version, available for users - 1.0.1
-			
----
 
-##### Build before deploy
+#### Build before deploy
 
 Connect to QStack via SSH client for example:
 - Windows: putty
 - Linux and OS X: terminal
 
 Login with the following credentials:
-username: dev@82.221.50.39
-password: dev
+- username: dev@82.221.50.39
+- password: dev
 
 Before you deploy the project always make sure that you have the latest update of the code. Do that with the following command:
 ```
@@ -48,9 +46,7 @@ And of course build it as well to make sure everything works as it should be:
 bin/build
 ```
 
----
-
-##### Deploy
+#### Deploy
 
 The only thing to do now is to deploy the project. 
 When you deploy the project it will automatically go to a open source in Dopbox.

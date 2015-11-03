@@ -88,7 +88,7 @@ It as simple as that.
 [Gradle](https://docs.gradle.org/current/userguide/build_environment.html) is used to execute the builds in this project. Gradle is consistent environment that can optimize the speed. 
 
 For continuous integration, [Travis](https://travis-ci.org/) was is to build and test the project that is hosted at GitHub.
-To access Travis request access to become collaborator.
+To access Travis, request access to become collaborator.
 
 
 ###### Unit test
