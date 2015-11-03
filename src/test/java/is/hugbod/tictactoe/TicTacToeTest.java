@@ -42,6 +42,22 @@ public class TicTacToeTest {
 	}
 
 	@Test
+	public final void checkGetCurrentPlayer() {
+		Service test = new Service();
+		assertEquals('X', test.getCurrentPlayer());
+		test.updateBoard(0, 1);
+		assertEquals('O', test.getCurrentPlayer());
+	}
+
+	@Test
+	public final void testSetAndGetBoard() {
+		Service test = new Service();
+		assertEquals('-', test.getBoard(1, 1));
+		test.setBoard(1, 1, 'O');
+		assertEquals('O', test.getBoard(1, 1));
+	}
+
+	@Test
 	public final void checkForFullBoard() {
 		Service test = new Service();
 		// Empty board tested
