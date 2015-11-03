@@ -7,7 +7,6 @@ public class Service
 
 	public Service() {
 		board = new char[3][3];
-		player = 'X';
 		ResetBoard();
 	}
 
@@ -76,5 +75,6 @@ public class Service
 				board[i][j] = '-';
 			} 
 		}
+		player = 'X';
 	}
 }
