@@ -18,7 +18,7 @@ In the administration manual you will find how to build and deploy the project. 
 ##### Versioning the releases
 The development releases will follow the method x.y.z, which correspond to major.minor.patch.
 
-- Major version numbers change whenever there is something significant changes to the software.
+- Major version numbers change whenever there is some significant changes to the software.
 - Minor version numbers change when new and minor feature is introduced.
 - Patch numbers change when a new build of the software is released to customers, like bug fixes.
 
@@ -37,7 +37,8 @@ Login with the following credentials:
 - username: dev@82.221.50.39
 - password: dev
 
-Before you deploy the project always make sure that you have the latest update of the code. Do that with the following command:
+Before you deploy the project always make sure that you have the latest update of the code. 
+To do that type in following command:
 ```
 git pull
 ```
