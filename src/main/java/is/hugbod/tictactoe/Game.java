@@ -1,10 +1,13 @@
 package is.hugbod.tictactoe;
 
-public class Game {
+public final class Game {
 
-	static TicTacToe game;
+	private static TicTacToe game;
 
-	public static void main(String[] args) {
+	private Game() {
+	}
+
+	public static void main(final String[] args) {
 		game = new TicTacToe();
 	}
 }
