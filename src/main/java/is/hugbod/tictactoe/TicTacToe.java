@@ -96,16 +96,14 @@ public class TicTacToe implements ActionListener {
 	}
 
 	private void display() {
-		for(int i = 0; i < 3; i++) {
-			for(int j = 0; j < 3; j++) {
+		for (int i = 0; i < boardSize; i++) {
+			for (int j = 0; j < boardSize; j++) {
 				board[i][j].setText("" + service.getBoard(i, j));
-				if(service.getBoard(i, j) == 'X') {
+				if (service.getBoard(i, j) == 'X') {
 					board[i][j].setBackground(Color.RED);
-				}
-				else if(service.getBoard(i, j) == 'O') {
+				} else if (service.getBoard(i, j) == 'O') {
 					board[i][j].setBackground(Color.BLUE);
-				}
-				else {
+				} else {
 					board[i][j].setBackground(null);
 				}
 			}

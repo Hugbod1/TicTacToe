@@ -21,4 +21,4 @@ bin/./dropbox_uploader.sh upload /tmp/${APPVERSION}/${APPVERSION} /${APPVERSION}
 bin/./dropbox_uploader.sh upload build/libs/TicTacToe-standalone.jar /${APPVERSION}
 
 # Run application once
-/tmp/${APPVERSION}/bin/${APP}
+#/tmp/${APPVERSION}/bin/${APP}
