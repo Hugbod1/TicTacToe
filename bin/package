@@ -3,3 +3,4 @@
 ./gradlew installDist
 ./gradlew distZip
 ./gradlew distTar
+./gradlew buildFatJar
