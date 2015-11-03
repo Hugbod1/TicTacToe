@@ -69,6 +69,7 @@ When your are done with that, clone the git repository for the project into your
 ```
 git clone https://github.com/Hugbod1/TicTacToe.git
 ```
+
 Now you can start working on that project.
 
 You should try to test- and build the project with the command:
@@ -87,6 +88,8 @@ It as simple as that.
 [Gradle](https://docs.gradle.org/current/userguide/build_environment.html) is used to execute the builds in this project. Gradle is consistent environment that can optimize the speed. 
 
 For continuous integration, [Travis](https://travis-ci.org/) was is to build and test the project that is hosted at GitHub.
+To access Travis request access to become collaborator.
+
 
 ###### Unit test
 TDD (Test Driven Development) where made through the whole process using unit tests. Unit testing is a part of the build process and it is important that they run fast, they are short code fragments that are created by the programmers.
