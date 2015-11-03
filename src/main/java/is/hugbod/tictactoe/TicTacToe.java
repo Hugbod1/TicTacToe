@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Random;
 
 public class TicTacToe implements ActionListener {
 
@@ -48,6 +49,8 @@ public class TicTacToe implements ActionListener {
 		else if(service.checkForFullBoard()) {
 			displayResult('D');
 		}
+		// Let the AI play one move for 'O'
+		aiTic();
 	}
 
 	private void displayResult(char result) {
@@ -90,5 +93,19 @@ public class TicTacToe implements ActionListener {
 	private void reset() {
 		service.resetBoard();
 		display();
+	}
+
+	private void aiTic() {
+		Random rn = new Random();
+		while(service.player == 'O') {
+			service.updateBoard(rn.nextInt(3), rn.nextInt(3));
+		}
+		display();
+		if(service.checkForWin()) {
+			displayResult(service.player);
+		}
+		else if(service.checkForFullBoard()) {
+			displayResult('D');
+		}
 	}
 }
