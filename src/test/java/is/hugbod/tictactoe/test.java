@@ -134,5 +134,14 @@ public class test{
 		assertEquals(player, test.board[2][1]);
 	}
 
+	// Test for ai
+	@Test
+	public void testaiTic(){
+		Service test = new Service();
+		char player = test.player;
+		test.aiTic();
+		assertFalse(player == test.player);
+	}
+
 }
 

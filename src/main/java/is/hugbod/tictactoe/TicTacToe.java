@@ -101,10 +101,7 @@ public class TicTacToe implements ActionListener {
 	}
 
 	private void aiTic() {
-		Random rn = new Random();
-		while(service.player == 'O') {
-			service.updateBoard(rn.nextInt(3), rn.nextInt(3));
-		}
+		service.aiTic();
 		display();
 		if(service.checkForWin()) {
 			displayResult(service.player);

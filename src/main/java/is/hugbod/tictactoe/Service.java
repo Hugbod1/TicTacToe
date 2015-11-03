@@ -1,7 +1,8 @@
 package is.hugbod.tictactoe;
 
-public class Service
-{
+import java.util.Random;
+
+public class Service {
 	char[][] board;
 	char player;
 
@@ -76,5 +77,14 @@ public class Service
 			} 
 		}
 		player = 'X';
+	}
+
+	public void aiTic() {
+		Random rn = new Random();
+		char currentplayer = player;
+		while(currentplayer == player) {
+			// "click" on a random square until next player's turn
+			updateBoard(rn.nextInt(3), rn.nextInt(3));
+		}
 	}
 }
