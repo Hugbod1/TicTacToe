@@ -8,7 +8,7 @@ The most awesome TicTacToe game ever
 **Team-members:**
 
 - Alexander Björnsson
-- Arnór Brynjólfsson 
+- Arnór Brynjólfss!on 
 - Kristinn Heiðar Freysteinsson
 - Raquelíta Rós Aguilar	
 - Snorri Hjörvar Jóhannsson
