@@ -1,8 +1,8 @@
 Computer Department								
-HugbÃºnaÃ°arfÃ¦Ã°i -
+Hugbúnaðarfæði -
 Late-term Assignment 
 
-#### HugboÃ°
+#### Hugboð
 
 ----
 
@@ -23,19 +23,16 @@ The development releases will follow the method x.y.z, which correspond to major
 - Patch numbers change when a new build of the software is released to customers, like bug fixes.
 
 Example: 	
-- Major version, available for users - 1.0.0
-- Minor version, only for beta testing - 0.1.0
-- Patch version, available for users - 1.0.1
+- Major version - 1.0.0
+- Minor version - 0.1.0
+- Patch version - 1.0.1
 
 #### Build before deploy
 
-Connect to QStack via SSH client for example:
-- Windows: putty
-- Linux and OS X: terminal
-
-Login with the following credentials:
-- username: dev@82.221.50.39
-- password: dev
+The first thing you need to is to clone the git repository for the project into your computer, use the following command:
+```
+git clone https://github.com/Hugbod1/TicTacToe.git
+```
 
 Before you deploy the project always make sure that you have the latest update of the code. 
 To do that type in following command:
@@ -63,12 +60,12 @@ You will have to enter the version number of the game. Make sure that to follow 
 ```
 Enter version >
 ```
-(To find out what releases are available right now click on this [link](https://www.dropbox.com/sh/8rknsxvnt42uys9/AABxODLvPEUaNIil0OE3UsHZa/TicTacToe-0.70/TicTacToe-standalone.jar?dl=0).)
+(To find out what releases are available right now click on this [link](https://www.dropbox.com/sh/8rknsxvnt42uys9/AADE8jwp3OeIsrqxbmH44PB7a?dl=0).)
 
 
-You have deployed the game and it is now available [here](https://www.dropbox.com/sh/8rknsxvnt42uys9/AABxODLvPEUaNIil0OE3UsHZa/TicTacToe-0.70/TicTacToe-standalone.jar?dl=0)!
+You have deployed the game and it is now available [here](https://www.dropbox.com/sh/8rknsxvnt42uys9/AADE8jwp3OeIsrqxbmH44PB7a?dl=0)!
 
 
 
 ---
-*Copyright Â© 2015 - HugboÃ° Development*
+*Copyright © 2015 - Hugboð Development*
